@@ -167,7 +167,7 @@ a {
     color: #B4D91A;
 }
 /*Side Panel*/
-.cartWindowLogged, .cartWindowNotLogged {
+.cartWindowLogged, .cartWindowNotLogged, .favoriteWindowLogged {
     width: 22.66%;
     max-height: 89%;
     display: flex;
@@ -184,19 +184,19 @@ a {
     visibility: hidden;
     overflow-y: auto;
 }
-.cartPanelHead {
+.cartPanelHead, .favouritePanelHead {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.cartPanleHeadText {
+.cartPanleHeadText, .favouritePanleHeadText {
     color: #E4F5DF;
     text-align: center;
     font-family: Bold;
     font-size: 45px;
     line-height: 56px;
 }
-.cartPanelCloseBut {
+.cartPanelCloseBut, .favouritePanelCloseBut {
     color: #E4F5DF;
     font-family: Bold;
     font-size: 50px;
@@ -208,14 +208,14 @@ a {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.cartPanelCloseBut:hover {
+.cartPanelCloseBut:hover, .favouritePanelCloseBut:hover {
     transform: rotate(10deg);
 }
-.cartPanelList {
+.cartPanelList, .favouritePanelList {
     display: flex;
     padding: 10px 5px;
 }
-.cartListTable {
+.cartListTable, .favouriteListTable {
     width: 100%;
 }
 .cartListTable td {
@@ -297,7 +297,7 @@ a {
 .cartPanelOptionsLogInBut:hover, .cartPanelOptionsRegBut:hover {
     scale: 0.95;
 }
-/*Cart Not Logged*/
+/*Not Logged*/
 .cartPanelOptions {
     width: 98%;
     display: flex;
@@ -312,6 +312,41 @@ a {
     font-family: Regular;
     font-size: 35px;
     line-height: 56px;
+}
+/*Favourite*/ /*Mot done*/
+.favouriteListTable td {
+    width: 66%;
+    color: rgba(202, 219, 192, 0.70);
+    text-align: start;
+    font-family: Bold;
+    font-size: 36px;
+    line-height: 42px;
+    padding: 15px 0;
+}
+.favouriteListTable div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background: #D9D9D9;
+    padding: 0 5px;
+}
+.favouriteListTable button {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #4d4d4d;
+    border-width: 2px;
+    color: #E4F5DF;
+    font-family: Bold;
+    font-size: 35px;
+    line-height: 33px;
+}
+.favouriteListTable p {
+    color: #4D4D4D;
+    font-family: Bold;
+    font-size: 30px;
 }
 @font-face {
     font-family: Bold;

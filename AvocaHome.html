@@ -15,7 +15,7 @@
             <div class="tools">
                 <!--<button class="comLinks" onclick="searchOpen()"><img src="sitepic/search.png" class="search"></button>-->
                 <button class="comLinks" title="Catalog"><img src="sitepic/catalog.png" class="catalog"></button>
-                <button class="comLinks" title="Favourite"><img src="sitepic/favPas.png" class="favourite"></button>
+                <button class="comLinks" title="Favourite" onclick="FavListAction(1)"><img src="sitepic/favPas.png" class="favourite"></button>
                 <button class="comLinks" title="Cart" onclick="CartListAction(1)"><img src="sitepic/cartPas.png" class="cart"></button>
                 <button class="comLinks" title="Profile" onclick="profileAction()"><img src="sitepic/accPas.png" class="account"></button>
             </div>
@@ -131,6 +131,20 @@
                 <p id="totalPrice" class="cartPanelTotalSum">0,00 €</p>
             </div>
             <button onclick="AddItem()" class="cartListBuyBut">Add Item</button>
+        </aside>
+        <!--Favourite Panels-->
+        <aside id="favouritePanel_L" class="favoriteWindowLogged">
+            <div class="favouritePanelHead">
+                <h1 class="favouritePanleHeadText">Favourite</h1>
+                <button class="favouritePanelCloseBut" onclick="FavListAction(2)">x</button>
+            </div>
+            <hr>
+            <div id="favouriteList" class="favouritePanelList">
+                <table class="favouriteListTable">
+                    <tbody id="favouriteProductList"></tbody>
+                </table>
+            </div>
+            <button onclick="AddFavItem()" class="cartListBuyBut">Add Item</button>
         </aside>
     </body>
 </html>

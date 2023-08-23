@@ -3,12 +3,15 @@ var ItemNumber = 1;
 let a;
 var Counter = [0];
 var Code = [0];
+var FavCounter = [0];
+var FavCode = [0];
 var lastDigit;
+var sideWindowOpened = false;
 function profileAction() {
     document.getElementById("UserInfo").innerHTML = "Hi, " + localStorage.getItem("nickname");
     if (profile == true) {
         Action(true);
-    } else if (profile == false) {
+    } else if (profile == false && sideWindowOpened == false) {
         Action(false);
     }
 }
@@ -16,20 +19,11 @@ function Action(a) {
     const logged = localStorage.getItem("logged");
     const accPanel_L = document.getElementById('accPanel_L');
     const accPanel_N = document.getElementById('accPanel_N');
-    if (a == true) {
-        profile = false;
-    } else if (a == false) {
-        profile = true;
-    }
     if (a == false && logged == "true") {
         accPanel_L.style.height = "318px";
         accPanel_L.style.border = "3px solid #121619";
         accPanel_L.style.transition = "0.3s";
-    } else if (a == false && logged == "false") {
-        accPanel_N.style.height = "88px";
-        accPanel_N.style.border = "3px solid #121619";
-        accPanel_N.style.transition = "0.3s";
-    } else if (a == false && (localStorage.length == 2 || localStorage.length == 0)) {
+    } else if (a == false && (logged == "false" || localStorage.length == 2 || localStorage.length == 0)) {
         accPanel_N.style.height = "88px";
         accPanel_N.style.border = "3px solid #121619";
         accPanel_N.style.transition = "0.3s";
@@ -38,14 +32,17 @@ function Action(a) {
         accPanel_L.style.transition = "0s";
         accPanel_L.style.height = "0";
         accPanel_L.style.border = "0";
-    } else if (a == true && logged == "false") {
+    } else if (a == true && (logged == "false" || localStorage.length == 2 || localStorage.length == 0)) {
         accPanel_N.style.transition = "0s";
         accPanel_N.style.height = "0";
         accPanel_N.style.border = "0";
-    } else if (a == true && (localStorage.length == 2 || localStorage.length == 0)) {
-        accPanel_N.style.height = "0";
-        accPanel_N.style.border = "0";
-        accPanel_N.style.transition = "0";
+    }
+    if (a == true) {
+        profile = false;
+        sideWindowOpened = false;
+    } else if (a == false) {
+        profile = true;
+        sideWindowOpened = true;
     }
 }
 function logOut() {
@@ -54,23 +51,27 @@ function logOut() {
 }
 function CartListAction(Action) {
     const logged = localStorage.getItem("logged");
-    if (Action === 1 && logged === "true") {
+    if (Action === 1 && logged === "true" && sideWindowOpened == false) {
         cartPanel_L.style.transition = "all 0.3s ease";
         cartPanel_L.style.right = "18px";
         cartPanel_L.style.visibility = "visible";
+        sideWindowOpened = true;
     } else if (Action === 2 && logged === "true") {
         cartPanel_L.style.visibility = "hidden";
         cartPanel_L.style.transition = "0s";
         cartPanel_L.style.right = "-300px";
-    } else if (Action === 1 && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
+        sideWindowOpened = false;
+    } else if (Action === 1 && sideWindowOpened == false &&(logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
         document.getElementById("NotLoggedTitle").innerHTML = "Cart";
         Panel_N.style.transition = "all 0.3s ease";
         Panel_N.style.right = "18px";
         Panel_N.style.visibility = "visible";
+        sideWindowOpened = true;
     } else if (Action === 2 && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
         Panel_N.style.visibility = "hidden";
         Panel_N.style.transition = "0s";
         Panel_N.style.right = "-300px";
+        sideWindowOpened = false;
     }
 }
 function Amount(amountChange) {
@@ -78,7 +79,6 @@ function Amount(amountChange) {
         return Number(amountChange);
     });
     lastDigit = CodeNumbers.pop();
-    console.log(CodeNumbers);
     const itemNum = Number(CodeNumbers.join(''));
     const itemAmount = document.getElementById("itemAmount" + itemNum);
     const deleteRow = document.getElementById("rowNum" + itemNum);
@@ -102,7 +102,7 @@ function TotalPrice(){
     }
     document.getElementById("totalPrice").innerHTML = price + " €";
 }
-function AddItem() {
+function AddItem() { /*creating new item*/
     Counter.push(1);
     const cartList = document.getElementById('CartProductList');
     const newRow = document.createElement('tr');
@@ -133,4 +133,32 @@ function AddItem() {
     cartList.appendChild(newRow);
     ItemNumber++;
     TotalPrice();
+}
+function FavListAction(ActionF) {
+    const logged = localStorage.getItem("logged");
+    if (ActionF === 1 && logged === "true" && sideWindowOpened == false) {
+        favouritePanel_L.style.transition = "all 0.3s ease";
+        favouritePanel_L.style.right = "18px";
+        favouritePanel_L.style.visibility = "visible";
+        sideWindowOpened = true;
+    } else if (ActionF === 2 && logged === "true") {
+        favouritePanel_L.style.visibility = "hidden";
+        favouritePanel_L.style.transition = "0s";
+        favouritePanel_L.style.right = "-300px";
+        sideWindowOpened = false;
+    } else if (ActionF === 1 && sideWindowOpened == false && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
+        document.getElementById("NotLoggedTitle").innerHTML = "Favourite";
+        Panel_N.style.transition = "all 0.3s ease";
+        Panel_N.style.right = "18px";
+        Panel_N.style.visibility = "visible";
+        sideWindowOpened = true;
+    } else if (ActionF === 2 && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
+        Panel_N.style.visibility = "hidden";
+        Panel_N.style.transition = "0s";
+        Panel_N.style.right = "-300px";
+        sideWindowOpened = false;
+    }
+}
+function AddFavItem() {
+
 }
