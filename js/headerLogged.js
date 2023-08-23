@@ -62,12 +62,12 @@ function CartListAction(Action) {
         cartPanel_L.style.visibility = "hidden";
         cartPanel_L.style.transition = "0s";
         cartPanel_L.style.right = "-300px";
-    } else if (Action === 1 && logged === "false") {
+    } else if (Action === 1 && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
+        document.getElementById("NotLoggedTitle").innerHTML = "Cart";
         Panel_N.style.transition = "all 0.3s ease";
         Panel_N.style.right = "18px";
         Panel_N.style.visibility = "visible";
-        document.getElementById("NotLoggedTitle").innerHTML = "Cart";
-    } else if (Action === 2 && logged === "false") {
+    } else if (Action === 2 && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
         Panel_N.style.visibility = "hidden";
         Panel_N.style.transition = "0s";
         Panel_N.style.right = "-300px";
