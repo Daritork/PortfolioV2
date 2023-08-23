@@ -1,0 +1,232 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(logpics/logBack.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.logInPage, .registerPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40.63%;
+    height: 66.4%;
+    background-color: #E4F5DF;
+    border: 3px solid #09814A;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.logInPage {
+    gap: 95px;
+}
+.registerPage {
+    gap: 61px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 19.4%;
+}
+.signInDiv, .registerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    width: 50%;
+    height: 100%;
+    background-color: #E4F5DF;
+    box-sizing: border-box;
+}
+/*Sign In Plate*/
+.signInDiv, .signInBut {
+    border-top-left-radius: 15px;
+    border-right-width: 2px;
+    border: 0px solid #09814A;
+}
+/*Register Plate*/
+.registerDiv, .registerBut {
+    border-top-right-radius: 15px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+}
+/**/
+.registerBut, .signInBut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    width: 50%;
+    height: 100%;
+    background-color: #CADBC0;
+    box-sizing: border-box;
+    border: 3px solid #09814b;
+}
+.registerBut:hover, .signInBut:hover {
+    background-color: #E4F5DF;
+    transition: all 0.2s ease;
+}
+.menuText {
+    text-align: center;
+	color: #121619;
+	font-family: Bold;
+    line-height: 42px;
+	font-size: 36px;
+}
+.signInField, .registerField {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 89.74%;
+    gap: 53px;
+}
+.signInField {
+    height: 28.81%;
+}
+.registerField {
+    height: 46.27%;
+}
+.SignInInput, .RegisterInput {
+    width: 100%;
+    height: 36.27%;
+    background-color: #CADBC0;
+    padding: 20px 19px;
+    outline: none;
+    font-family: Regular;
+	font-size: 24px;
+    border-radius: 20px;
+    border: 3px solid#09814A;
+    box-sizing: border-box;
+}
+.SignInInput {
+    height: 36.27%;
+}
+.RegisterInput {
+    height: 22.58%;
+}
+.RegisterInput:invalid, .SignInInput:invalid {
+    border: 3px solid red;
+}
+.formBut {
+    width: 85.46%;
+    height: 7.46%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cancelBut {
+    padding-left: 2px;
+    padding-right: 2px;
+    position: relative;
+    text-align: center;
+	color: #12161962;
+	font-family: Medium;
+    line-height: 32px;
+	font-size: 24px;
+    cursor: pointer;
+}
+.cancelBut::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+.cancelBut:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.cancelBut::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0 0 0 0;
+    border-bottom: 3px solid #12161962;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+.acceptBut {
+    width: 38.4%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #09814A;
+    border-radius: 30px;
+    border: 3px solid #121619;
+    box-sizing: border-box;
+    text-align: center;
+	color: #121619;
+	font-family: Bold;
+    line-height: 32px;
+	font-size: 24px;
+}
+.acceptBut:hover {
+    cursor: pointer;
+    animation: mymove 1s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+.errmessage {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    width: 350px;
+    position: fixed;
+    height: 0;
+    top: 25px;
+    right: 25px;
+    background-color: #09814A;
+    border-radius: 20px;
+    border: 0;
+    box-sizing: border-box;
+    padding: 17px 20px;
+    visibility: hidden;
+}
+.closeBut {
+	color: #2D4739;
+    cursor: pointer;
+}
+.closeButPic {
+    width: 100%;
+}
+.errMessageText {
+    text-align: center;
+	color: #121619;
+	font-family: Bold;
+    line-height: 24px;
+	font-size: 24px;
+    border-radius: 15px;
+    width: 90%;
+}
+@keyframes mymove {
+    0%   {background: #09814bd3;}
+    100%  {background: #E4F5DF;}
+}
+@font-face {
+    font-family: Bold;
+    src: url(Laila/Laila-Bold.ttf);
+}
+@font-face {
+    font-family: Medium;
+    src: url(Laila/Laila-Medium.ttf);
+}
+@font-face {
+    font-family: Regular;
+    src: url(Laila/Laila-Regular.ttf);
+}

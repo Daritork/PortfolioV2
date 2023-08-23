@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <script src="js/headerLogged.js"></script>
+        <script src="js/LogIn.js"></script>
+		<meta charset="utf-8">
+		<title>Avoca</title>
+        <link rel="icon" type="image/x-icon" href="sitepic/favicon.png">
+	</head>
+	<body>
+		<header>
+            <a href="#" class="homepageLink"><img src="sitepic/favicon.png"><h1 class="Title">Avoca</h1></a>
+            <div class="tools">
+                <!--<button class="comLinks" onclick="searchOpen()"><img src="sitepic/search.png" class="search"></button>-->
+                <button class="comLinks" title="Catalog"><img src="sitepic/catalog.png" class="catalog"></button>
+                <button class="comLinks" title="Favourite"><img src="sitepic/favPas.png" class="favourite"></button>
+                <button class="comLinks" title="Cart" onclick="CartListAction(1)"><img src="sitepic/cartPas.png" class="cart"></button>
+                <button class="comLinks" title="Profile" onclick="profileAction()"><img src="sitepic/accPas.png" class="account"></button>
+            </div>
+		</header>
+        <div class="firstPage">
+            <div class="firstPageback">
+                <h1 class="centerText">Tea is always a good idea</h1>
+            </div>
+            <div class="headerText">
+                <p class="firstPageText">Discover more</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="24" viewBox="0 0 40 24" fill="none">
+                    <path d="M39.9502 2.18171C39.6685 1.05366 38.6747 0.155981 37.5558 0.012988C37.0863 -0.0426202 36.3743 0.0844843 35.9204 0.314861C35.717 0.418134 32.8844 3.23826 27.8062 8.386L19.9971 16.3062L12.1958 8.386C7.10969 3.23826 4.27713 0.418134 4.07369 0.314861C2.61828 -0.41599 0.904664 0.195701 0.22391 1.68918C0.0439412 2.09432 0.00481742 2.26909 0.0126422 2.84106C0.0126422 4.11211 -0.738534 3.25415 9.33974 13.502C15.4196 19.6824 18.4165 22.6773 18.659 22.8124C19.2302 23.1222 19.8953 23.2334 20.49 23.1063C20.7561 23.0507 21.1395 22.9156 21.3351 22.8124C21.5777 22.6773 24.5745 19.6824 30.6544 13.502C38.6356 5.38315 39.6294 4.34249 39.7858 3.96912C39.9815 3.48453 40.0597 2.63452 39.9502 2.18171Z" fill="#CADBC0" fill-opacity="0.7"/>
+                </svg>
+                <div class="topGradient"></div>
+            </div>
+        </div>
+        <div class="ad">
+            <div class="basicOffer">
+                <div class="basicLinks">
+                    <a href="#"><img src="sitepic/offerCatalog/TeaBags.png" class="basicImg"></a>
+                    <h2 class="basicLinksText">Tea Bags</h2>
+                </div>
+                <div class="basicLinks">
+                    <a href="#"><img src="sitepic/offerCatalog/Tea.png" class="basicImg"></a>
+                    <h2 class="basicLinksText">Tea</h2>
+                </div>
+                <div class="basicLinks">
+                    <a href="#"><img src="sitepic/offerCatalog/TeaAccesories.png" class="basicImg"></a>
+                    <h2 class="basicLinksText">Tea Accesories</h2>
+                </div>
+            </div>
+            <h1 class="secondAdTitle">Bestsellers</h1>
+            <div class="basicOffer">
+                <div class="specialAdLinks">
+                    <a href="#"><img src="sitepic/offerCatalog/Present.png" class="secondOfferImg"></a>
+                    <h2 class="basicLinksText">Tea present</h2>
+                    <p class="basicLinksDesc">If your friend, mom, girlfriend, or boyfriend loves tea, we have great news for you! No worries about a cover for your present because you can choose one of ours. Greeting letter included.</p>
+                </div>
+                <div class="specialAdLinks">
+                    <a href="#"><img src="sitepic/offerCatalog/TeaBox.png" class="secondOfferImg"></a>
+                    <h2 class="basicLinksText">Tea-Box</h2>
+                    <p class="basicLinksDesc">Organize your favorite teas with our Tea-Box! Stylish, compact, and airtight, it keeps your tea fresh and flavorsome. Unleash the true potential of your tea collection with the Tea-Box. Get yours today and savor every moment of tea-time indulgence!</p>
+                </div>
+            </div>
+        </div>
+        <div class="specialityBackPic">
+            <div class="speciality">
+                <div class="sideAboutSpeciality">
+                    <h2 class="titleAboutSpeciality">Avocado Tea</h2>
+                    <p class="aboutSpecialityText">Indulge in the velvety smoothness of Creamy Avocado Tea, a refreshingly unique fusion of avocado goodness and premium tea leaves. Experience a delightful combination that will surprise and satisfy your taste buds in every sip. Try it now and embark on a flavor adventure like no other! 🥑🍵✨</p>
+                    <a  href="#" class="aboutSpecialityButton">Buy now</a>
+                </div>
+                <div class="secondSideSpeciality">
+                    <h1 class="aboutSpecialityMainTitle">Try out our specialty</h1>
+                    <img class="aboutSpecialityMaimImg" src="sitepic/speciality/teaPic.png">
+                </div>
+            </div>
+        </div>
+        <!--Side panels-->
+        <!--Account Panel-->
+        <aside id="accPanel_L" class="accSidepanel">
+            <div class="profInfo">
+                <h2 class="profUser" id="UserInfo"></h2>
+                <img class="profUserPic" src="sitepic/pfp.png">
+            </div>
+            <a href="#" class="profileBut">
+                <img class="profInfoIcon" src="sitepic/ViewProfile.png">
+                <h2 class="profInfoText">View profile</h2>
+            </a>
+            <a href="#" class="profileBut">
+                <img class="profInfoIcon" src="sitepic/Settings.png">
+                <h2 class="profInfoText"> Settings</h2>
+            </a>
+            <a onclick="logOut()" class="profileBut">
+                <img class="profInfoIcon" src="sitepic/logOut.png">
+                <h2 class="profInfoText">Log out</h2>
+            </a>
+        </aside>
+        <aside id="accPanel_N" class="accSidepanelNotLogged">
+            <div class="logLinks">
+                <a href="Sign In.html" class="logText">Sign In</a>
+                <p class="logText_p">/</p>
+                <a href="Register.html" class="logText">Register</a>
+            </div>
+        </aside>
+        <!--Cart Panels-->
+        <aside id="Panel_N" class="cartWindowNotLogged">
+            <div class="cartPanelHead">
+                <h1 id="NotLoggedTitle" class="cartPanleHeadText">Cart</h1>
+                <button onclick="CartListAction(2)" class="cartPanelCloseBut">x</button>
+            </div>
+            <hr>
+            <div class="cartPanelOptions">
+                <h2 class="cartPanelOptionsText">You are not logged</h2>
+                <a href="Sign In.html" class="cartPanelOptionsLogInBut">Log In</a>
+                <a href="Register.html" class="cartPanelOptionsRegBut">Register</a>
+            </div>
+        </aside>
+        <aside id="cartPanel_L" class="cartWindowLogged">
+            <div class="cartPanelHead">
+                <h1 class="cartPanleHeadText">Cart</h1>
+                <button class="cartPanelCloseBut" onclick="CartListAction(2)">x</button>
+            </div>
+            <hr>
+            <div id="cartList" class="cartPanelList">
+                <table class="cartListTable">
+                    <tbody id="CartProductList"></tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="cartPanelTotal">
+                <h2 class="cartPanelTotalText">Total</h2>
+                <p id="totalPrice" class="cartPanelTotalSum">0,00 €</p>
+            </div>
+            <button onclick="AddItem()" class="cartListBuyBut">Add Item</button>
+        </aside>
+    </body>
+</html>

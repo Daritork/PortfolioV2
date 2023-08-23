@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/log.css">
+		<script src="js/LogIn.js"></script>
+		<meta charset="utf-8">
+		<title>Avoca I Sign In</title>
+		<link rel="icon" type="image/x-icon" href="sitepic/favicon.png">
+	</head>
+	<body>
+		<div class="logInPage">
+			<div class="menu">
+				<div class="signInDiv">
+					<h2 class="menuText">Sign In</h2>
+				</div>
+				<a href="Register.html" class="registerBut">
+					<h2 class="menuText">Register</h2>
+				</a>
+			</div>
+			<div class="signInField">
+				<input type="text" placeholder="Name" class="SignInInput" id="name_sign" minlength="6" maxlength="16">
+				<input type="password" placeholder="Passwort" class="SignInInput" id="pass_sign" minlength="8" maxlength="16">
+			</div>
+			<div class="formBut">
+				<a onclick="cancel()" class="cancelBut">← Cancel</a>
+				<button type="submit" class="acceptBut" onclick="SignIn()">Sign In</button>
+			</div>
+			<div id="ErrPanel" class="errmessage">
+				<h2 id="message" class="errMessageText"></h2>
+				<p class="closeBut" onclick="alertClose()"><img class="closeButPic" src="sitepic/closeBut.png"></p>
+			</div>
+		</div>
+	</body>
+</html>
