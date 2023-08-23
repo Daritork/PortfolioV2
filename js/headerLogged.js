@@ -3,6 +3,7 @@ var ItemNumber = 1;
 let a;
 var Counter = [0];
 var Code = [0];
+var lastDigit;
 function profileAction() {
     document.getElementById("UserInfo").innerHTML = "Hi, " + localStorage.getItem("nickname");
     if (profile == true) {
@@ -75,20 +76,22 @@ function CartListAction(Action) {
 function Amount(amountChange) {
     var CodeNumbers = String(amountChange).split("").map((amountChange)=>{
         return Number(amountChange);
-    })
+    });
+    lastDigit = CodeNumbers.pop();
     console.log(CodeNumbers);
-    const itemAmount = document.getElementById("itemAmount" + CodeNumbers[0]);
-    const deleteRow = document.getElementById("rowNum" + CodeNumbers[0]);
-    if (CodeNumbers[1] === 1 && Counter[CodeNumbers[0]] != 0) {
-        Counter[CodeNumbers[0]]--;
-        itemAmount.innerHTML = Counter[CodeNumbers[0]];
+    const itemNum = Number(CodeNumbers.join(''));
+    const itemAmount = document.getElementById("itemAmount" + itemNum);
+    const deleteRow = document.getElementById("rowNum" + itemNum);
+    if (lastDigit === 1 && Counter[itemNum] != 0) {
+        Counter[itemNum]--;
+        itemAmount.innerHTML = Counter[itemNum];
     }
-    if (CodeNumbers[1] === 1 && Counter[CodeNumbers[0]] === 0) {
+    if (lastDigit === 1 && Counter[itemNum] === 0) {
         deleteRow.parentNode.removeChild(deleteRow);
     }
-    if (CodeNumbers[1] === 2 && Counter[CodeNumbers[0]] != 10) {
-        Counter[CodeNumbers[0]]++;
-        itemAmount.innerHTML = Counter[CodeNumbers[0]];
+    if (lastDigit === 2 && Counter[itemNum] != 10) {
+        Counter[itemNum]++;
+        itemAmount.innerHTML = Counter[itemNum];
     }
     TotalPrice();
 }
