@@ -102,8 +102,14 @@ function TotalPrice(){
     }
     document.getElementById("totalPrice").innerHTML = price + " €";
 }
-function AddItem() { /*creating new item*/
+function AddItem(itemName) { /*creating new item*/
     Counter.push(1);
+    let name;
+    if (itemName == 0) {
+        name = "Item " + ItemNumber;
+    } else if (itemName != "") {
+        name = "IfF" + itemName;
+    }
     const cartList = document.getElementById('CartProductList');
     const newRow = document.createElement('tr');
     newRow.setAttribute("id", "rowNum" + ItemNumber);
@@ -115,9 +121,9 @@ function AddItem() { /*creating new item*/
     const plusBut = document.createElement("button");
     const plusButText = document.createTextNode(`+`);
     const amountText = document.createElement("p");
-    amountText.setAttribute("id", "itemAmount" + ItemNumber);
     const amountInnerText = document.createTextNode(Counter[ItemNumber]);
-    const newPoleText = document.createTextNode('Item ' + ItemNumber);
+    amountText.setAttribute("id", "itemAmount" + ItemNumber);
+    const newPoleText = document.createTextNode(name);
     /**/
     plusBut.appendChild(plusButText);
     plusBut.setAttribute("onclick", "Amount("+ItemNumber+"_2)");
@@ -170,11 +176,13 @@ function AddFavItem() {
     const newPole3 = document.createElement('td');
     const amountText = document.createElement("p");
     amountText.setAttribute("id", "itemAmount" + ItemFavNumber);
-    const newPoleText = document.createTextNode('Item from Favourite ' + ItemFavNumber);
+    const newPoleText = document.createTextNode('IfF' + ItemFavNumber);
     const addToCartBut = document.createElement("button");
+    addToCartBut.setAttribute("onclick", "AddItem("+ ItemFavNumber +")");
     const addToCartImg = document.createElement("img");
     addToCartImg.setAttribute("src", "sitepic/AddToCart.png");
     const favBut = document.createElement("button");
+    favBut.setAttribute("onclick", "AddItem("+ ItemFavNumber +")");
     const favImg = document.createElement("img");
     favImg.setAttribute("src", "sitepic/Favourite.png");
     /* */
