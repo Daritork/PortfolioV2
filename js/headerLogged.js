@@ -170,7 +170,7 @@ function AddFavItem() {
     const newPole3 = document.createElement('td');
     const amountText = document.createElement("p");
     amountText.setAttribute("id", "itemAmount" + ItemFavNumber);
-    const newPoleText = document.createTextNode('Item ' + ItemFavNumber);
+    const newPoleText = document.createTextNode('Item from Favourite ' + ItemFavNumber);
     const addToCartBut = document.createElement("button");
     const addToCartImg = document.createElement("img");
     addToCartImg.setAttribute("src", "sitepic/AddToCart.png");
