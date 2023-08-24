@@ -1,9 +1,9 @@
 var profile = false;
 var ItemNumber = 1;
+var ItemFavNumber = 1;
 let a;
 var Counter = [0];
 var Code = [0];
-var FavCounter = [0];
 var FavCode = [0];
 var lastDigit;
 var sideWindowOpened = false;
@@ -118,6 +118,7 @@ function AddItem() { /*creating new item*/
     amountText.setAttribute("id", "itemAmount" + ItemNumber);
     const amountInnerText = document.createTextNode(Counter[ItemNumber]);
     const newPoleText = document.createTextNode('Item ' + ItemNumber);
+    /**/
     plusBut.appendChild(plusButText);
     plusBut.setAttribute("onclick", "Amount("+ItemNumber+"_2)");
     amountText.appendChild(amountInnerText);
@@ -160,5 +161,32 @@ function FavListAction(ActionF) {
     }
 }
 function AddFavItem() {
-
+    const favTBody = document.getElementById("favouriteProductList");
+    const newRow = document.createElement('tr');
+    newRow.setAttribute("id", "rowNum" + ItemFavNumber);
+    const newPole1 = document.createElement('td');
+    newPole1.setAttribute("class", "favFirstTd");
+    const newPole2 = document.createElement('td');
+    const newPole3 = document.createElement('td');
+    const amountText = document.createElement("p");
+    amountText.setAttribute("id", "itemAmount" + ItemFavNumber);
+    const newPoleText = document.createTextNode('Item ' + ItemFavNumber);
+    const addToCartBut = document.createElement("button");
+    const addToCartImg = document.createElement("img");
+    addToCartImg.setAttribute("src", "sitepic/AddToCart.png");
+    const favBut = document.createElement("button");
+    const favImg = document.createElement("img");
+    favImg.setAttribute("src", "sitepic/Favourite.png");
+    /* */
+    favBut.appendChild(favImg);
+    newPole3.appendChild(favBut);
+    addToCartBut.appendChild(addToCartImg);
+    newPole2.appendChild(addToCartBut);
+    amountText.appendChild(newPoleText);
+    newPole1.appendChild(amountText);
+    newRow.appendChild(newPole1);
+    newRow.appendChild(newPole2);
+    newRow.appendChild(newPole3);
+    favTBody.appendChild(newRow);
+    ItemFavNumber++;
 }
