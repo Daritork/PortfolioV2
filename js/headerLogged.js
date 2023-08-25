@@ -182,7 +182,7 @@ function AddFavItem() {
     const addToCartImg = document.createElement("img");
     addToCartImg.setAttribute("src", "sitepic/AddToCart.png");
     const favBut = document.createElement("button");
-    favBut.setAttribute("onclick", "AddItem("+ ItemFavNumber +")");
+    favBut.setAttribute("onclick", "DelItem("+ ItemFavNumber +")");
     const favImg = document.createElement("img");
     favImg.setAttribute("src", "sitepic/Favourite.png");
     /* */
@@ -197,4 +197,8 @@ function AddFavItem() {
     newRow.appendChild(newPole3);
     favTBody.appendChild(newRow);
     ItemFavNumber++;
+}
+function DelItem(favItemNum) {
+    const deleteRow = document.getElementById("rowNum" + favItemNum);
+    deleteRow.parentNode.removeChild(deleteRow);
 }
