@@ -332,6 +332,10 @@ a {
 .favouriteListTable img {
     width: 50px;
     height: auto;
+    transition: all 0.3s ease;
+}
+.favouriteListTable img:hover {
+    scale: 0.95;
 }
 .favouriteListTable p {
     color: rgba(202, 219, 192, 0.70);

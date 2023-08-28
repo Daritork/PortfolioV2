@@ -202,3 +202,6 @@ function DelItem(favItemNum) {
     const deleteRow = document.getElementById("rowNum" + favItemNum);
     deleteRow.parentNode.removeChild(deleteRow);
 }
+function CatalogPage() {
+    window.location.href = "Catalog.html";
+}
