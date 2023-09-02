@@ -2,16 +2,17 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/header.css">
-        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" type="text/css" href="css/catalog.css">
         <script src="js/headerLogged.js"></script>
         <script src="js/LogIn.js"></script>
+        <script src="js/Catalog.js"></script>
 		<meta charset="utf-8">
 		<title>Avoca I Catalog</title>
         <link rel="icon" type="image/x-icon" href="sitepic/favicon.png">
 	</head>
 	<body>
 		<header>
-            <a href="#" class="homepageLink"><img src="sitepic/favicon.png"><h1 class="Title">Avoca</h1></a>
+            <a href="AvocaHome.html" class="homepageLink"><img src="sitepic/favicon.png"><h1 class="Title">Avoca</h1></a>
             <div class="tools">
                 <!--<button class="comLinks" onclick="searchOpen()"><img src="sitepic/search.png" class="search"></button>-->
                 <button class="comLinks" title="Catalog"><img src="sitepic/catalog.png" class="catalog"></button>
@@ -20,6 +21,107 @@
                 <button class="comLinks" title="Profile" onclick="profileAction()"><img src="sitepic/accPas.png" class="account"></button>
             </div>
 		</header>
-
+        <aside>
+            <div>
+                <h1 class="filterTitle">Filter</h1>
+                <label class="filterItem" onclick="Filter()">
+                    <input type="checkbox" class="checkboxFilter">
+                    <h2>Tea</h2>
+                </label>
+                <label class="filterItem">
+                    <input type="checkbox" class="checkboxFilter">
+                    <h2>Tea Bags</h2>
+                </label>
+                <label class="filterItem">
+                    <input type="checkbox" class="checkboxFilter">
+                    <h2>Tea Accesories</h2>
+                </label>
+                <label class="filterItem">
+                    <input type="checkbox" class="checkboxFilter">
+                    <h2>Tea Presents</h2>
+                </label>
+                <label class="filterItem">
+                    <input type="checkbox" class="checkboxFilter">
+                    <h2>Tea-Box</h2>
+                </label>
+            </div>
+        </aside>
+        <div class="itemListWindow">
+            <table>
+                <tbody id="itemList" class="tableBody"></tbody>
+            </table>
+        </div>
+        <!--Side panels-->
+        <!--Account Panel-->
+        <aside id="accPanel_L" class="accSidepanel">
+            <div class="profInfo">
+                <h2 class="profUser" id="UserInfo"></h2>
+                <img class="profUserPic" src="sitepic/pfp.png">
+            </div>
+            <a href="#" class="profileBut">
+                <img class="profInfoIcon" src="sitepic/ViewProfile.png">
+                <h2 class="profInfoText">View profile</h2>
+            </a>
+            <a href="#" class="profileBut">
+                <img class="profInfoIcon" src="sitepic/Settings.png">
+                <h2 class="profInfoText"> Settings</h2>
+            </a>
+            <a onclick="logOut()" class="profileBut">
+                <img class="profInfoIcon" src="sitepic/logOut.png">
+                <h2 class="profInfoText">Log out</h2>
+            </a>
+        </aside>
+        <aside id="accPanel_N" class="accSidepanelNotLogged">
+            <div class="logLinks">
+                <a href="Sign In.html" class="logText">Sign In</a>
+                <p class="logText_p">/</p>
+                <a href="Register.html" class="logText">Register</a>
+            </div>
+        </aside>
+        <!--Cart Panels-->
+        <aside id="Panel_N" class="cartWindowNotLogged">
+            <div class="cartPanelHead">
+                <h1 id="NotLoggedTitle" class="cartPanleHeadText">Cart</h1>
+                <button onclick="CartListAction(2)" class="cartPanelCloseBut">x</button>
+            </div>
+            <hr>
+            <div class="cartPanelOptions">
+                <h2 class="cartPanelOptionsText">You are not logged</h2>
+                <a href="Sign In.html" class="cartPanelOptionsLogInBut">Log In</a>
+                <a href="Register.html" class="cartPanelOptionsRegBut">Register</a>
+            </div>
+        </aside>
+        <aside id="cartPanel_L" class="cartWindowLogged">
+            <div class="cartPanelHead">
+                <h1 class="cartPanleHeadText">Cart</h1>
+                <button class="cartPanelCloseBut" onclick="CartListAction(2)">x</button>
+            </div>
+            <hr>
+            <div id="cartList" class="cartPanelList">
+                <table class="cartListTable">
+                    <tbody id="CartProductList"></tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="cartPanelTotal">
+                <h2 class="cartPanelTotalText">Total</h2>
+                <p id="totalPrice" class="cartPanelTotalSum">0,00 €</p>
+            </div>
+            <button onclick="AddItem(0)" class="cartListBuyBut">Add Item</button>
+        </aside>
+        <!--Favourite Panels-->
+        <aside id="favouritePanel_L" class="favoriteWindowLogged">
+            <div class="favouritePanelHead">
+                <h1 class="favouritePanleHeadText">Favourite</h1>
+                <button class="favouritePanelCloseBut" onclick="FavListAction(2)">x</button>
+            </div>
+            <hr>
+            <div id="favouriteList" class="favouritePanelList">
+                <table class="favouriteListTable">
+                    <tbody id="favouriteProductList"></tbody>
+                </table>
+            </div>
+            <button onclick="AddFavItem()" class="cartListBuyBut">Add Item</button>
+        </aside>
     </body>
 </html>

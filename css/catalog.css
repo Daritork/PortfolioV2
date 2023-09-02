@@ -1,0 +1,60 @@
+body {
+    align-items: flex-start;
+    flex-direction: row;
+}
+aside {
+    border-top-right-radius: 40px;
+    border-right: 4px solid #B4D91A;
+    position: fixed;
+    bottom: 0;
+    height: 89%;
+    width: 24%;
+    padding-top: 17px;
+    padding-left: 4.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.filterTitle {
+    color: #B4D91A;
+    font-family: Bold;
+    font-size: 44px;
+    line-height: 45px;
+}
+.filterItem {
+    gap: 0.8vw;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+.filterItem h2 {
+    color: #B4D91A;
+    font-family: Bold;
+    font-size: 30px;
+    line-height: 30px;
+}
+.checkboxFilter {
+    width: 28px;
+    height: 28px;
+}
+.itemListWindow {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 89%;
+    width: 76%;
+    overflow-y: auto;
+    background-color: rgba(226, 27, 183, 0.333);
+}
+@font-face {
+    font-family: Bold;
+    src: url(Laila/Laila-Bold.ttf);
+}
+@font-face {
+    font-family: Medium;
+    src: url(Laila/Laila-Medium.ttf);
+}
+@font-face {
+    font-family: Regular;
+    src: url(Laila/Laila-Regular.ttf);
+}
