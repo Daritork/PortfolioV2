@@ -10,8 +10,10 @@ aside {
     height: 89%;
     width: 24%;
     padding-top: 17px;
-    padding-left: 4.5%;
+    padding-left: 3.5%;
+    padding-right: 2%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -44,7 +46,63 @@ aside {
     height: 89%;
     width: 76%;
     overflow-y: auto;
-    background-color: rgba(226, 27, 183, 0.333);
+    padding: 2% 3%;
+}
+.tableBody {
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+}
+.tableBody td {
+    display: flex;
+    flex-direction: column;
+    width: 15.5vw;
+    margin-bottom: 10%;
+}
+.tableBody img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.tableBody div {
+    padding: 0 5%;
+    padding-top: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tableBody h2 {
+    color: #B0B0B0;
+    text-align: center;
+    font-family: Bold;
+    font-size: clamp(10px, 2vw, 35px);
+}
+.favBut {
+    border: 0;
+    background-color: #00000000;
+    transition: all 0.3s ease;
+}
+.favButImg:hover {
+    content: url('sitepic/catalog/favAct.png');
+}
+.tableBody p {
+    color: #B4D91A;
+    text-align: center;
+    font-family: Bold;
+    font-size: 25px;
+}
+.buyBut {
+    background-color: #00000000;
+    padding: 1% 10%;
+    border-radius: 5px;
+    border: 3px solid #B4D91A;
+    color: #B0B0B0;
+    text-align: center;
+    font-family: Bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.buyBut:hover {
+    background-color: #b0b0b059;
 }
 @font-face {
     font-family: Bold;
