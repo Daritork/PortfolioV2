@@ -1,6 +1,12 @@
 var itemInRow = 4;
 var rowNum = 0;
-let items = [["Green Tea", 5.05], ["Bag", 6.2], ["Accesories", 4.95], ["Presents", 7.99], ["Box", 3.95]];
+let items = [/*[Name, Price]*/
+["Green Tea", 5.05],
+["Bag", 6.2], 
+["Accesories", 4.95], 
+["Presents", 7.99], 
+["Box", 3.95]
+];
 for (let i = 0; i < items.length; i++) {
     let rowNumId = "Row" + (rowNum - 1);
     let itemProperties = items[i];
