@@ -57,7 +57,7 @@ aside {
     display: flex;
     flex-direction: column;
     width: 15.5vw;
-    margin-bottom: 10%;
+    margin-bottom: 4%;
 }
 .tableBody img {
     width: 100%;
@@ -65,21 +65,24 @@ aside {
 }
 .tableBody div {
     padding: 0 5%;
-    padding-top: 4%;
+    padding-top: 6%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .tableBody h2 {
     color: #B0B0B0;
-    text-align: center;
+    text-align: start;
     font-family: Bold;
-    font-size: clamp(10px, 2vw, 35px);
+    font-size: clamp(10px, 1.6vw, 35px);
 }
 .favBut {
     border: 0;
     background-color: #00000000;
     transition: all 0.3s ease;
+}
+.favButImg {
+    width: 4vw;
 }
 .favButImg:hover {
     content: url('sitepic/catalog/favAct.png');
@@ -88,7 +91,7 @@ aside {
     color: #B4D91A;
     text-align: center;
     font-family: Bold;
-    font-size: 25px;
+    font-size: clamp(8px, 1.7vw, 30px);;
 }
 .buyBut {
     background-color: #00000000;

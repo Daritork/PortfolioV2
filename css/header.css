@@ -167,7 +167,7 @@ a {
 }
 /*Side Panel*/
 .cartWindowLogged, .cartWindowNotLogged, .favoriteWindowLogged {
-    width: 22.66%;
+    width: 20vw;
     max-height: 89%;
     display: flex;
     flex-direction: column;
