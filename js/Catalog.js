@@ -9,7 +9,7 @@ let items = [/*[Name, Price]*/
 ["Avocado Tea", 3.95],
 ["Avocado Teabags", 3.95],
 ["Tea Pot", 3.95],
-["64 Bags Tea", 3.95]
+["64 Bags Teabox", 3.95]
 ];
 for (let i = 0; i < items.length; i++) {
     let itemProperties = items[i];
