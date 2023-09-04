@@ -2,16 +2,18 @@ var itemInRow = 4;
 var rowNum = 0;
 let items = [/*[Name, Price]*/
 ["Green Tea", 5.05],
-["Bag", 6.2], 
-["Accesories", 4.95], 
+["Bag", 6.20], 
+["Tea Set", 4.95], 
 ["Presents", 7.99], 
-["Box", 3.95]
+["Tea-Box", 3.95],
+["Avocado Tea", 3.95],
+["Avocado Teabags", 3.95],
+["Tea Pot", 3.95],
+["64 Bags Tea", 3.95]
 ];
 for (let i = 0; i < items.length; i++) {
-    let rowNumId = "Row" + (rowNum - 1);
     let itemProperties = items[i];
     const list = document.getElementById("itemList");
-    const rowWithElements = document.getElementById(rowNumId);
     const newElement = document.createElement('td');
     const itemImage = document.createElement('img');
     itemImage.setAttribute("src", "sitepic/catalog/GreenTea.png");
@@ -25,7 +27,7 @@ for (let i = 0; i < items.length; i++) {
     addToFavButontFavicon.setAttribute("class", "favButImg");
     const row2 = document.createElement('div');
     const itemPrice = document.createElement('p');
-    let textNode = document.createTextNode(itemProperties[1] + " €");
+    let textNode = document.createTextNode(itemProperties[1].toFixed(2) + " €");
     const buyButton = document.createElement('button');
     buyButton.setAttribute("class", "buyBut");
     const buyButtonText = document.createTextNode("Buy");
