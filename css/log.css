@@ -33,7 +33,7 @@ a {
     box-sizing: border-box;
 }
 .logInPage {
-    gap: 95px;
+    gap: 15%;
 }
 .registerPage {
     gap: 61px;
