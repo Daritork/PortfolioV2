@@ -21,7 +21,8 @@ for (let i = 0; i < items.length; i++) {
     const addToFavButton = document.createElement('button');
     addToFavButton.setAttribute("class", "favBut");
     const addToFavButontFavicon = document.createElement("img");
-    addToFavButontFavicon.setAttribute("src", "sitepic/catalog/favourite.png", "class", "favButImg");
+    addToFavButontFavicon.setAttribute("src", "sitepic/catalog/favourite.png");
+    addToFavButontFavicon.setAttribute("class", "favButImg");
     const row2 = document.createElement('div');
     const itemPrice = document.createElement('p');
     let textNode = document.createTextNode(itemProperties[1] + " €");
