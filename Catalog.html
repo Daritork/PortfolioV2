@@ -10,36 +10,36 @@
         <link rel="icon" type="image/x-icon" href="sitepic/favicon.png">
 	</head>
 	<body>
-		<header>
-            <a href="AvocaHome.html" class="homepageLink"><img src="sitepic/favicon.png"><h1 class="Title">Avoca</h1></a>
-            <div class="tools">
-                <!--<button class="comLinks" onclick="searchOpen()"><img src="sitepic/search.png" class="search"></button>-->
-                <button class="comLinks" title="Catalog"><img src="sitepic/catalog.png" class="catalog"></button>
-                <button class="comLinks" title="Favourite" onclick="FavListAction(1)"><img src="sitepic/favPas.png" class="favourite"></button>
-                <button class="comLinks" title="Cart" onclick="CartListAction(1)"><img src="sitepic/cartPas.png" class="cart"></button>
-                <button class="comLinks" title="Profile" onclick="profileAction()"><img src="sitepic/accPas.png" class="account"></button>
+		<nav class="nav">
+            <a href="AvocaHome.html" class="nav_link"><img src="sitepic/favicon.png"><h1 class="nav_title">Avoca</h1></a>
+            <div class="nav_tools">
+                <!--<button class="nav_com-links" onclick="searchOpen()"><img src="sitepic/search.png" class="search"></button>-->
+                <button class="nav__com-links" title="Catalog"><img src="sitepic/catalog.png" class="catalog"></button>
+                <button class="nav__com-links" title="Favourite" onclick="FavListAction(1)"><img src="sitepic/favPas.png" class="favourite"></button>
+                <button class="nav__com-links" title="Cart" onclick="CartListAction(1)"><img src="sitepic/cartPas.png" class="cart"></button>
+                <button class="nav__com-links" title="Profile" onclick="profileAction()"><img src="sitepic/accPas.png" class="account"></button>
             </div>
-		</header>
-        <aside>
+		</nav>
+        <aside class="filter">
             <div>
-                <h1 class="filterTitle">Filter</h1>
-                <label class="filterItem" onclick="Filter()">
+                <h1 class="filter_title">Filter</h1>
+                <label class="filter_item" onclick="Filter()">
                     <input type="checkbox" class="checkboxFilter">
                     <h2>Tea</h2>
                 </label>
-                <label class="filterItem">
+                <label class="filter_item">
                     <input type="checkbox" class="checkboxFilter">
                     <h2>Tea Bags</h2>
                 </label>
-                <label class="filterItem">
+                <label class="filter_item">
                     <input type="checkbox" class="checkboxFilter">
                     <h2>Tea Accesories</h2>
                 </label>
-                <label class="filterItem">
+                <label class="filter_item">
                     <input type="checkbox" class="checkboxFilter">
                     <h2>Tea Presents</h2>
                 </label>
-                <label class="filterItem">
+                <label class="filter_item">
                     <input type="checkbox" class="checkboxFilter">
                     <h2>Tea-Box</h2>
                 </label>
@@ -53,7 +53,7 @@
         </div>
         <!--Side panels-->
         <!--Account Panel-->
-        <aside id="accPanel_L" class="accSidepanel">
+        <aside id="accPanel_L" class="acc-sidepanel">
             <div class="profInfo">
                 <h2 class="profUser" id="UserInfo"></h2>
                 <img class="profUserPic" src="sitepic/pfp.png">
@@ -71,7 +71,7 @@
                 <h2 class="profInfoText">Log out</h2>
             </a>
         </aside>
-        <aside id="accPanel_N" class="accSidepanelNotLogged">
+        <aside id="accPanel_N" class="acc-sidepanel-notlogged">
             <div class="logLinks">
                 <a href="Sign In.html" class="logText">Sign In</a>
                 <p class="logText_p">/</p>
@@ -107,7 +107,6 @@
                 <h2 class="cartPanelTotalText">Total</h2>
                 <p id="totalPrice" class="cartPanelTotalSum">0,00 €</p>
             </div>
-            <button onclick="AddItem(0)" class="cartListBuyBut">Add Item</button>
         </aside>
         <!--Favourite Panels-->
         <aside id="favouritePanel_L" class="favoriteWindowLogged">
@@ -121,7 +120,6 @@
                     <tbody id="favouriteProductList"></tbody>
                 </table>
             </div>
-            <button onclick="AddFavItem()" class="cartListBuyBut">Add Item</button>
         </aside>
     </body>
     <script src="js/Catalog.js"></script>

@@ -10,17 +10,17 @@
         <link rel="icon" type="image/x-icon" href="sitepic/favicon.png">
 	</head>
 	<body>
-		<header>
-            <a href="#" class="homepageLink"><img src="sitepic/favicon.png"><h1 class="Title">Avoca</h1></a>
-            <div class="tools">
+		<nav class="nav">
+            <a href="#" class="nav_link"><img src="sitepic/favicon.png"><h1 class="nav_title">Avoca</h1></a>
+            <div class="nav_tools">
                 <!--<button class="comLinks" onclick="searchOpen()"><img src="sitepic/search.png" class="search"></button>-->
-                <button class="comLinks" title="Catalog" onclick="CatalogPage()"><img src="sitepic/catalog.png" class="catalog"></button>
-                <button class="comLinks" title="Favourite" onclick="FavListAction(1)"><img src="sitepic/favPas.png" class="favourite"></button>
-                <button class="comLinks" title="Cart" onclick="CartListAction(1)"><img src="sitepic/cartPas.png" class="cart"></button>
-                <button class="comLinks" title="Profile" onclick="profileAction()"><img src="sitepic/accPas.png" class="account"></button>
+                <button class="nav__com-links" title="Catalog" onclick="CatalogPage()"><img src="sitepic/catalog.png" class="catalog"></button>
+                <button class="nav__com-links" title="Favourite" onclick="FavListAction(1)"><img src="sitepic/favPas.png" class="favourite"></button>
+                <button class="nav__com-links" title="Cart" onclick="CartListAction(1)"><img src="sitepic/cartPas.png" class="cart"></button>
+                <button class="nav__com-links" title="Profile" onclick="profileAction()"><img src="sitepic/accPas.png" class="account"></button>
             </div>
-		</header>
-        <div class="firstPage">
+		</nav>
+        <header class="firstPage">
             <div class="firstPageback">
                 <h1 class="centerText">Tea is always a good idea</h1>
             </div>
@@ -31,52 +31,49 @@
                 </svg>
                 <div class="topGradient"></div>
             </div>
-        </div>
-        <div class="specialityBackPic">
+        </header>
+        <main class="main">
             <div class="speciality">
-                <div class="sideAboutSpeciality">
-                    <h2 class="titleAboutSpeciality">Avocado Tea</h2>
-                    <p class="aboutSpecialityText">Indulge in the velvety smoothness of Creamy Avocado Tea, a refreshingly unique fusion of avocado goodness and premium tea leaves. Experience a delightful combination that will surprise and satisfy your taste buds in every sip. Try it now and embark on a flavor adventure like no other! 🥑🍵✨</p>
-                    <a  href="Catalog.html" class="aboutSpecialityButton">Buy now</a>
-                </div>
-                <div class="secondSideSpeciality">
-                    <h1 class="aboutSpecialityMainTitle">Try out our specialty</h1>
-                    <img class="aboutSpecialityMaimImg" src="sitepic/speciality/teaPic.png">
+                <h1 class="speciality__title">Try out our specialty</h1>
+                <div class="speciality__article">
+                    <h2 class="speciality__article_title">Avocado Tea</h2>
+                    <p class="speciality__article_text">Indulge in the velvety smoothness of Creamy Avocado Tea, a refreshingly unique fusion of avocado goodness and premium tea leaves. Experience a delightful combination that will surprise and satisfy your taste buds in every sip. Try it now and embark on a flavor adventure like no other! 🥑🍵✨</p>
+                    <a href="Catalog.html" class="speciality__article__link"><p class="speciality__article__link_text">Buy now</p></a>
                 </div>
             </div>
-        </div>
-        <div class="ad">
-            <div class="basicOffer">
-                <div class="basicLinks">
-                    <a href="Catalog.html"><img src="sitepic/offerCatalog/TeaBags.png" class="basicImg"></a>
-                    <h2 class="basicLinksText">Tea Bags</h2>
+            <div class="ad">
+                <div class="basicOffer">
+                    <div class="basicLinks">
+                        <a href="Catalog.html"><img src="sitepic/offerCatalog/TeaBags.png" class="basicImg"></a>
+                        <h2 class="basicLinksText">Tea Bags</h2>
+                    </div>
+                    <div class="basicLinks">
+                        <a href="Catalog.html"><img src="sitepic/offerCatalog/Tea.png" class="basicImg"></a>
+                        <h2 class="basicLinksText">Tea</h2>
+                    </div>
+                    <div class="basicLinks">
+                        <a href="Catalog.html"><img src="sitepic/offerCatalog/TeaAccesories.png" class="basicImg"></a>
+                        <h2 class="basicLinksText">Tea Accesories</h2>
+                    </div>
                 </div>
-                <div class="basicLinks">
-                    <a href="Catalog.html"><img src="sitepic/offerCatalog/Tea.png" class="basicImg"></a>
-                    <h2 class="basicLinksText">Tea</h2>
-                </div>
-                <div class="basicLinks">
-                    <a href="Catalog.html"><img src="sitepic/offerCatalog/TeaAccesories.png" class="basicImg"></a>
-                    <h2 class="basicLinksText">Tea Accesories</h2>
+                <h1 class="secondAdTitle">Bestsellers</h1>
+                <div class="basicOffer">
+                    <div class="specialAdLinks">
+                        <a href="Catalog.html"><img src="sitepic/offerCatalog/Present.png" class="secondOfferImg"></a>
+                        <h2 class="basicLinksText">Tea present</h2>
+                        <p class="basicLinksDesc">If your friend, mom, girlfriend, or boyfriend loves tea, we have great news for you! No worries about a cover for your present because you can choose one of ours. Greeting letter included.</p>
+                    </div>
+                    <div class="specialAdLinks">
+                        <a href="Catalog.html"><img src="sitepic/offerCatalog/TeaBox.png" class="secondOfferImg"></a>
+                        <h2 class="basicLinksText">Tea-Box</h2>
+                        <p class="basicLinksDesc">Organize your favorite teas with our Tea-Box! Stylish, compact, and airtight, it keeps your tea fresh and flavorsome. Unleash the true potential of your tea collection with the Tea-Box. Get yours today and savor every moment of tea-time indulgence!</p>
+                    </div>
                 </div>
             </div>
-            <h1 class="secondAdTitle">Bestsellers</h1>
-            <div class="basicOffer">
-                <div class="specialAdLinks">
-                    <a href="Catalog.html"><img src="sitepic/offerCatalog/Present.png" class="secondOfferImg"></a>
-                    <h2 class="basicLinksText">Tea present</h2>
-                    <p class="basicLinksDesc">If your friend, mom, girlfriend, or boyfriend loves tea, we have great news for you! No worries about a cover for your present because you can choose one of ours. Greeting letter included.</p>
-                </div>
-                <div class="specialAdLinks">
-                    <a href="Catalog.html"><img src="sitepic/offerCatalog/TeaBox.png" class="secondOfferImg"></a>
-                    <h2 class="basicLinksText">Tea-Box</h2>
-                    <p class="basicLinksDesc">Organize your favorite teas with our Tea-Box! Stylish, compact, and airtight, it keeps your tea fresh and flavorsome. Unleash the true potential of your tea collection with the Tea-Box. Get yours today and savor every moment of tea-time indulgence!</p>
-                </div>
-            </div>
-        </div>
+        </main>
         <!--Side panels-->
         <!--Account Panel-->
-        <aside id="accPanel_L" class="accSidepanel">
+        <aside id="accPanel_L" class="acc-sidepanel">
             <div class="profInfo">
                 <h2 class="profUser" id="UserInfo"></h2>
                 <img class="profUserPic" src="sitepic/pfp.png">
@@ -94,7 +91,7 @@
                 <h2 class="profInfoText">Log out</h2>
             </a>
         </aside>
-        <aside id="accPanel_N" class="accSidepanelNotLogged">
+        <aside id="accPanel_N" class="acc-sidepanel-notlogged">
             <div class="logLinks">
                 <a href="Sign In.html" class="logText">Sign In</a>
                 <p class="logText_p">/</p>
@@ -130,7 +127,6 @@
                 <h2 class="cartPanelTotalText">Total</h2>
                 <p id="totalPrice" class="cartPanelTotalSum">0,00 €</p>
             </div>
-            <button onclick="AddItem(0)" class="cartListBuyBut">Add Item</button>
         </aside>
         <!--Favourite Panels-->
         <aside id="favouritePanel_L" class="favoriteWindowLogged">
@@ -144,7 +140,6 @@
                     <tbody id="favouriteProductList"></tbody>
                 </table>
             </div>
-            <button onclick="AddFavItem()" class="cartListBuyBut">Add Item</button>
         </aside>
     </body>
 </html>

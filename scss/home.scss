@@ -1,0 +1,184 @@
+body {
+    align-items: center;
+    background-color: #000000;
+}
+.firstPage {
+    width: 100%;
+    height: 100vh;
+    background: url(sitepic/Bodyback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.firstPageback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(50% 50% at 50% 50.00%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.74) 67.05%);
+}
+.centerText {
+    color: #E4F5DF;
+    text-align: center;
+    font-family: Bold;
+    font-size: 64px;
+    line-height: 56px;
+}
+.headerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 110px;
+}
+.topGradient {
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, #111 80%);
+    width: 100%;
+    height: 80px;
+    position: relative;
+    bottom: 75px;
+}
+.firstPageText {
+    color: rgba(202, 219, 192, 0.70);
+    font-family: Bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+}
+/**/
+.speciality {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(180deg, #111 0.87%, rgba(17, 17, 17, 0.00) 18.75%, rgba(17, 17, 17, 0.00) 67.71%, #111 98.91%), 
+    url("../sitepic/speciality/back.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 11vh 0;
+
+    &__title {
+        color: #B4D91A;
+        font-family: Bold;
+        font-size: 4.5rem;
+        font-style: normal;
+        align-self: flex-start;
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+        height: 100%;
+        width: 27%;
+        border-radius: 0px 20px 20px 0px;
+        border-right: 4px solid transparent;
+        border-image: linear-gradient(#B4D91A00, #B4D91A, #B4D91A, #B4D91A00) 1;
+        background: rgba(0, 0, 0, 0.60);
+        backdrop-filter: blur(21px);
+        padding: 5% 4%;
+
+        &_title {
+            color: #E4F5DF;
+            text-align: center;
+            font-family: Bold;
+            font-size: 3rem;
+        }
+
+        &_text {
+            color: #B0B0B0;
+            font-family: Medium;
+            font-size: 1.2rem;
+        }
+
+        &__link {
+            width: 70%;
+            height: 6vh;
+            border-radius: 20px;
+            border: 2px solid #CADBC0;
+            background: #B4D91A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2vh;
+
+            &_text {
+                color: #000;
+                font-family: Bold;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+/**/
+.ad {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    height: 160vh;
+    gap: 100px;
+    padding: 80px 0;
+}
+.basicOffer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+.basicLinks, .specialAdLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.basicLinks {
+    gap: 30px;
+    height: 49.35%;
+    width: 24%;
+}
+.specialAdLinks {
+    gap: 43px;
+    width: 42.24%;
+}
+.basicImg, .secondOfferImg {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    outline: 10px solid rgba(0, 0, 0, 0.5);
+    outline-offset: -10px;
+    transition: all 0.2s ease;
+}
+.basicImg:hover, .secondOfferImg:hover {
+    outline: 20px solid rgba(0, 0, 0, 0.5);
+    outline-offset: -20px;
+    border-radius: 25px;
+}
+.basicLinksText {
+    color: #E4F5DF;
+    font-family: Bold;
+    font-size: 45px;
+    line-height: 42px;
+}
+.secondAdTitle {
+    color: #B4D91A;
+    font-family: Regular;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.basicLinksDesc {
+    color: #CADBC0;
+    font-family: Regular;
+    font-size: 24px;
+    line-height: 32px;
+}

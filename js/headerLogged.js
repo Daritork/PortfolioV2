@@ -1,9 +1,11 @@
 var profile = false;
+let a;
 var ItemNumber = 1;
 var ItemFavNumber = 1;
-let a;
+/*Items in cart*/
 var Counter = [0];
-var Code = [0];
+var itemPrice = [0];
+/**/
 var FavCode = [0];
 var lastDigit;
 var sideWindowOpened = false;
@@ -97,19 +99,16 @@ function Amount(amountChange) {
 }
 function TotalPrice(){
     var price = 0;
-    for (let i=1; i < Counter.length; i++) {
-        price = price + (Counter[i]*5);
+    for (let i = 1; i < Counter.length; i++) {
+        price = price + (Counter[i] * itemPrice[i]);
     }
-    document.getElementById("totalPrice").innerHTML = price + " €";
+    let lastPrice = price.toFixed(2);
+    document.getElementById("totalPrice").innerHTML = lastPrice + " €";
 }
-function AddItem(itemName) { /*creating new item*/
+function AddItem(itemName, price) { /*creating new item*/
     Counter.push(1);
-    let name;
-    if (itemName == 0) {
-        name = "Item " + ItemNumber;
-    } else if (itemName != "") {
-        name = "IfF" + itemName;
-    }
+    itemPrice.push(price);
+    let name = itemName;
     const cartList = document.getElementById('CartProductList');
     const newRow = document.createElement('tr');
     newRow.setAttribute("id", "rowNum" + ItemNumber);
@@ -126,10 +125,10 @@ function AddItem(itemName) { /*creating new item*/
     const newPoleText = document.createTextNode(name);
     /**/
     plusBut.appendChild(plusButText);
-    plusBut.setAttribute("onclick", "Amount("+ItemNumber+"_2)");
+    plusBut.setAttribute("onclick", "Amount(" + ItemNumber + "_2)");
     amountText.appendChild(amountInnerText);
     minusBut.appendChild(minusButText);
-    minusBut.setAttribute("onclick", "Amount("+ItemNumber+"_1)");
+    minusBut.setAttribute("onclick", "Amount(" + ItemNumber + "_1)");
     adjustPanel.appendChild(minusBut);
     adjustPanel.appendChild(amountText);
     adjustPanel.appendChild(plusBut);
@@ -151,7 +150,7 @@ function FavListAction(ActionF) {
     } else if (ActionF === 2 && logged === "true") {
         favouritePanel_L.style.visibility = "hidden";
         favouritePanel_L.style.transition = "0s";
-        favouritePanel_L.style.right = "-300px";
+        favouritePanel_L.style.right = "-400px";
         sideWindowOpened = false;
     } else if (ActionF === 1 && sideWindowOpened == false && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
         document.getElementById("NotLoggedTitle").innerHTML = "Favourite";
@@ -162,11 +161,11 @@ function FavListAction(ActionF) {
     } else if (ActionF === 2 && (logged === "false" || localStorage.length == 2 || localStorage.length == 0)) {
         Panel_N.style.visibility = "hidden";
         Panel_N.style.transition = "0s";
-        Panel_N.style.right = "-300px";
+        Panel_N.style.right = "-400px";
         sideWindowOpened = false;
     }
 }
-function AddFavItem() {
+function AddFavItem(itemName, price) {
     const favTBody = document.getElementById("favouriteProductList");
     const newRow = document.createElement('tr');
     newRow.setAttribute("id", "rowNum" + ItemFavNumber);
@@ -176,13 +175,13 @@ function AddFavItem() {
     const newPole3 = document.createElement('td');
     const amountText = document.createElement("p");
     amountText.setAttribute("id", "itemAmount" + ItemFavNumber);
-    const newPoleText = document.createTextNode('IfF' + ItemFavNumber);
+    const newPoleText = document.createTextNode(itemName);
     const addToCartBut = document.createElement("button");
-    addToCartBut.setAttribute("onclick", "AddItem("+ ItemFavNumber +")");
+    addToCartBut.setAttribute("onclick", "AddItem('"+ itemName +"', " + price + ")");
     const addToCartImg = document.createElement("img");
     addToCartImg.setAttribute("src", "sitepic/AddToCart.png");
     const favBut = document.createElement("button");
-    favBut.setAttribute("onclick", "DelItem("+ ItemFavNumber +")");
+    favBut.setAttribute("onclick", "DelItem('"+ ItemFavNumber +"')");
     const favImg = document.createElement("img");
     favImg.setAttribute("src", "sitepic/Favourite.png");
     /* */

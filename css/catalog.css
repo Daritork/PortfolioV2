@@ -1,121 +1,123 @@
 body {
-    align-items: flex-start;
-    flex-direction: row;
+  align-items: flex-start;
+  flex-direction: row;
 }
-aside {
-    border-top-right-radius: 40px;
-    border-right: 4px solid #B4D91A;
-    position: fixed;
-    bottom: 0;
-    height: 87%;
-    width: 24%;
-    padding-top: 17px;
-    padding-left: 3.5%;
-    padding-right: 2%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
+
+.filter {
+  border-top-right-radius: 40px;
+  border-right: 4px solid #B4D91A;
+  position: fixed;
+  bottom: 0;
+  height: 87%;
+  width: 24%;
+  padding-top: 17px;
+  padding-left: 3.5%;
+  padding-right: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.filterTitle {
-    color: #B4D91A;
-    font-family: Bold;
-    font-size: 44px;
-    line-height: 45px;
+.filter_title {
+  color: #B4D91A;
+  font-family: Bold;
+  font-size: 44px;
+  line-height: 45px;
 }
-.filterItem {
-    gap: 0.8vw;
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
+.filter_item {
+  color: #B4D91A;
+  font-family: Bold;
+  font-size: 44px;
+  line-height: 45px;
 }
-.filterItem h2 {
-    color: #B4D91A;
-    font-family: Bold;
-    font-size: 30px;
-    line-height: 30px;
+.filter_item {
+  gap: 0.8vw;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
 }
+.filter_item h2 {
+  color: #B4D91A;
+  font-family: Bold;
+  font-size: 30px;
+  line-height: 30px;
+  width: 80%;
+}
+
 .checkboxFilter {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 }
+
 .itemListWindow {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    height: 89%;
-    width: 76%;
-    overflow-y: auto;
-    padding: 2% 3%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 89%;
+  width: 76%;
+  overflow-y: auto;
+  padding: 2% 3%;
 }
+
 .tableBody {
-    display: flex;
-    gap: 3%;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .tableBody td {
-    display: flex;
-    flex-direction: column;
-    width: 15.5vw;
-    margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin-bottom: 4%;
 }
 .tableBody img {
-    width: 100%;
-    transition: all 0.3s ease;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 .tableBody div {
-    padding: 0 5%;
-    padding-top: 6%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  padding: 0 5%;
+  padding-top: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .tableBody h2 {
-    color: #B0B0B0;
-    text-align: start;
-    font-family: Bold;
-    font-size: clamp(10px, 1.6vw, 35px);
-}
-.favBut {
-    border: 0;
-    background-color: #00000000;
-    transition: all 0.3s ease;
-}
-.favButImg {
-    width: 4vw;
-}
-.favButImg:hover {
-    content: url('sitepic/catalog/favAct.png');
+  color: #B0B0B0;
+  text-align: start;
+  font-family: Bold;
+  font-size: 1.6rem;
 }
 .tableBody p {
-    color: #B4D91A;
-    text-align: center;
-    font-family: Bold;
-    font-size: clamp(8px, 1.7vw, 30px);;
+  color: #B4D91A;
+  text-align: center;
+  font-family: Bold;
+  font-size: 1.6rem;
 }
+
+.fav-but {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+}
+.fav-but_img {
+  width: 4vw;
+}
+.fav-but_img:hover {
+  content: url("sitepic/catalog/favAct.png");
+}
+
 .buyBut {
-    background-color: #00000000;
-    padding: 1% 10%;
-    border-radius: 5px;
-    border: 3px solid #B4D91A;
-    color: #B0B0B0;
-    text-align: center;
-    font-family: Bold;
-    font-size: 20px;
-    transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1% 10%;
+  border-radius: 5px;
+  border: 3px solid #B4D91A;
+  color: #B0B0B0;
+  text-align: center;
+  font-family: Bold;
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
 .buyBut:hover {
-    background-color: #b0b0b059;
-}
-@font-face {
-    font-family: Bold;
-    src: url(Laila/Laila-Bold.ttf);
-}
-@font-face {
-    font-family: Medium;
-    src: url(Laila/Laila-Medium.ttf);
-}
-@font-face {
-    font-family: Regular;
-    src: url(Laila/Laila-Regular.ttf);
+  background-color: rgba(176, 176, 176, 0.3490196078);
 }
