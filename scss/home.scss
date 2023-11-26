@@ -1,6 +1,7 @@
 body {
     align-items: center;
-    background-color: #000000;
+    background-color: #000000; 
+    overflow-x: hidden;
 }
 .firstPage {
     width: 100%;
@@ -181,4 +182,102 @@ body {
     font-family: Regular;
     font-size: 24px;
     line-height: 32px;
+}
+.advantages {
+    padding: 5vh 5vw;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__box {
+        width: 15vw;
+        display: flex;
+        gap: 1.5vh;
+        flex-direction: column;
+        align-items: center;
+
+        &_title {
+            color: rgba(202, 219, 192, 0.70);
+            text-align: center;
+            font-family: LailaBold;
+            font-size: 40px;         
+        }
+    }
+}
+.newssubscription {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #111 0.87%, rgba(17, 17, 17, 0.00) 11.95%, rgba(17, 17, 17, 0.00) 88.53%, #111 100%),  
+    url("../sitepic/newssubscription/backgroundPic.png");
+    background-size: cover;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 20vh;
+        height: 25vh;
+        border-radius: 15.434px;
+        border: 2px solid #000000;
+        background: rgba(0, 0, 0, 0.30);
+        padding: 5vh 10vh;
+        gap: 1vh;
+
+        &_title {
+            color: #AFD60C;
+            font-family: Bold;
+            font-size: 63px;
+        }
+
+        &__form {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            &_email {
+                width: 60%;
+                height: 6.5vh;
+                border-radius: 23px;
+                border: 2.701px solid #000000;
+                background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+                backdrop-filter: blur(16.205921173095703px);
+                padding: 0 20px;
+                font-size: 18px;
+
+                &::placeholder {
+                    color: rgba(0, 0, 0, 0.623);
+                    font-family: Medium;
+                    font-size: 1rem;
+                }
+
+                &:invalid {
+                    border-color: #ff0000;
+                }
+            }
+
+            &_submit {
+                width: 35%;
+                border-radius: 23px;
+                border: 2.315px solid #000;
+                background: #B4D91A;
+                color: #000;
+                font-family: Bold;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+
+        &_message {
+            display: flex;
+            align-self: flex-start;
+            gap: 1vw;
+            color: #ff0000;
+            visibility: hidden;
+        }
+    }
 }

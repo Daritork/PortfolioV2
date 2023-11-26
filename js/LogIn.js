@@ -74,3 +74,5 @@ function cancel() {
     window.location.href = "AvocaHome.html";
     localStorage.setItem("logged", "false");
 }
+function CheckUserEmail() {
+}
